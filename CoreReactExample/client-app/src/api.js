@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:56386/api/",
+    baseURL: "/api/",
 });
-
+    
 export const localApi = {
     department: () => api.get("department")
 }
