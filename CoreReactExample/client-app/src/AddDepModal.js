@@ -11,22 +11,27 @@ export class AddDepModal extends Component{
     handleSubmit(event){
         event.preventDefault();
         axios.post(process.env.REACT_APP_API+'department', {
-            headers:{
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true'
-            },
-            body:JSON.stringify({
-                DepartmentId:null,
-                DepartmentName:event.target.DepartmentName.value
-            })
+            DepartmentId:null,
+            DepartmentName:event.target.DepartmentName.value
         })
-        .then(res=>res.json())
-        .then((result)=>{
-            alert(result);
-        },
-        (error)=>{
-            alert('Failed');
-        })
+        // var data={a:1,b:2,c:3}
+        // axios.post(process.env.REACT_APP_API+'department', {
+        //     headers:{
+        //         'Access-Control-Allow-Origin': '*',
+        //         'Access-Control-Allow-Credentials': 'true',
+        //     },
+        //     body:JSON.stringify({
+        //         DepartmentId:null,
+        //         DepartmentName:event.target.DepartmentName.value
+        //     })
+        // })
+        // .then(res=>res.json())
+        // .then((result)=>{
+        //     alert(result);
+        // },
+        // (error)=>{
+        //     alert('Failed');
+        // })
     }
 
     render(){

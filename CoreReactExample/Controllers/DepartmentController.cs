@@ -42,7 +42,7 @@ namespace CoreReactExample.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post(Department dep)
+        public JsonResult Post([FromBody]Department dep)
         {
             string query = @"
                 insert into dbo.Department values
