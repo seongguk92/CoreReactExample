@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
+import axios from "axios";
 
 export class AddDepModal extends Component{
     constructor(props){
         super(props);
+        this.handleSubmit=this.handleSubmit.bind(this);
     }
 
     handleSubmit(event){
-        event.preventdefault();
-        fetch(process.env.REACT_APP_API+'department',{
-            method:'POST',
+        event.preventDefault();
+        axios.post(process.env.REACT_APP_API+'department', {
             headers:{
-                'Accept':'application/json',
-                'Content-Type':'application/json'
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': 'true'
             },
             body:JSON.stringify({
                 DepartmentId:null,
