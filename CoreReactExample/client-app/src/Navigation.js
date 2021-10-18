@@ -11,13 +11,13 @@ export class Navigation extends Component{
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/">
-                    Home
+                    Home1
                 </NavLink>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/department">
-                    Department
+                    Department1
                 </NavLink>
                 <NavLink className="d-inline p-2 bg-dark text-white" to="/employee">
-                    Employee
+                    Employee1
                 </NavLink>
 
                 </Nav>
