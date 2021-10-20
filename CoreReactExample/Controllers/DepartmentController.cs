@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreReactExample.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
 using System.Data;
-using CoreReactExample.Models;
+using System.Data.SqlClient;
 
 namespace CoreReactExample.Controllers
 {
@@ -42,11 +42,11 @@ namespace CoreReactExample.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post([FromBody]Department dep)
+        public JsonResult Post([FromBody] Department dep)
         {
             string query = @"
                 insert into dbo.Department values
-                ('"+dep.DepartmentName+@"')";
+                ('" + dep.DepartmentName + @"')";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
             SqlDataReader myReader;

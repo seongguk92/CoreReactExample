@@ -13,11 +13,12 @@ export class AddDepModal extends Component{
         axios.post(process.env.REACT_APP_API+'department', {
             DepartmentId:null,
             DepartmentName:event.target.DepartmentName.value
-        }
-        .then(res=>alert(res.data))
-        ,(error)=>{
-             alert(error);
         })
+        .then(res=>alert(res.data)
+        ,(error)=>{
+            alert(error);
+        })
+        
         // .then((result)=>{
         //     alert(result);
         // },

@@ -5,5 +5,6 @@ const api = axios.create({
 });
     
 export const localApi = {
-    department: () => api.get("department")
+    department: () => api.get("department"),
+    employee: () => api.get("employee")
 }
