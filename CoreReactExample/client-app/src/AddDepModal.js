@@ -18,7 +18,7 @@ export class AddDepModal extends Component{
         ,(error)=>{
             alert(error);
         })
-        
+        //
         // .then((result)=>{
         //     alert(result);
         // },
